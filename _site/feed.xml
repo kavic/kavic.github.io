@@ -6,9 +6,63 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 26 Jul 2016 15:46:45 +0800</pubDate>
-    <lastBuildDate>Tue, 26 Jul 2016 15:46:45 +0800</lastBuildDate>
+    <pubDate>Wed, 27 Jul 2016 18:13:39 +0800</pubDate>
+    <lastBuildDate>Wed, 27 Jul 2016 18:13:39 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>iOS逆向工程准备工作</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;1.准备一台越狱的设备&lt;/h1&gt;
+
+&lt;h1 id=&quot;theos&quot;&gt;2.安装Theos&lt;/h1&gt;
+&lt;p&gt;在Terminal 执行命令：&lt;/p&gt;
+&lt;pre&gt;
+tanjunzhaodeMacBook-Pro:~ tanjunzhao$ export THEOS=/opt/theos 
+
+tanjunzhaodeMacBook-Pro:~ tanjunzhao$ sudo git clone git://github.com/DHowett/theos.git $THEOS
+&lt;/pre&gt;
+&lt;p&gt;完成Theos的安装&lt;/p&gt;
+
+&lt;h1 id=&quot;ldid&quot;&gt;3.配置ldid&lt;/h1&gt;
+&lt;p&gt;下载地址：&lt;a href=&quot;http://joedj.net/ldid &quot;&gt;http://joedj.net/ldid &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载文件放置”/opt/theos/bin/”&lt;/p&gt;
+
+&lt;p&gt;设置权限，在Terminal执行命令：&lt;/p&gt;
+
+&lt;pre&gt;sudo chmod 777 /opt/theos/bin/ldid&lt;/pre&gt;
+
+&lt;h1 id=&quot;cydiasubstrate&quot;&gt;4.配置CydiaSubstrate&lt;/h1&gt;
+&lt;p&gt;Theos存在一个bug，无法生成libsubstrate.dylib文件&lt;/p&gt;
+
+&lt;p&gt;解决方案：
+越狱设备使用Cydia 下载 CydiaSubstrate&lt;/p&gt;
+
+&lt;p&gt;使用iFunbox 将libsubstrate.dylib（越越设备上） 拷贝到 PC的“/opt/theos/lib/”目录下&lt;/p&gt;
+
+&lt;p&gt;（推荐）也可以是用OpenSS的scp命令 完成以上拷贝工作（需要使用Cydia 安装OpenSS）&lt;/p&gt;
+
+&lt;h1 id=&quot;dpkg-deb&quot;&gt;5.配置dpkg-deb&lt;/h1&gt;
+&lt;p&gt;该工具用于将工程打包成deb文件（越越包的标准格式）&lt;/p&gt;
+
+&lt;h1 id=&quot;theos-nic-tempelates&quot;&gt;6.配置Theos NIC tempelates&lt;/h1&gt;
+&lt;p&gt;下载地址：&lt;a href=&quot;https://github.com/DHowett/theos-nic-templates&quot;&gt;https://github.com/DHowett/theos-nic-templates&lt;/a&gt;
+将下载的zip文件解压得到的.tar文件拷贝到“/opt/theos/tempelate/iphone/”目录下即可&lt;/p&gt;
+
+&lt;p&gt;在Terminal输入：&lt;/p&gt;
+
+&lt;pre&gt;/opt/theos/bin/nic.pl&lt;/pre&gt;
+
+&lt;p&gt;出现以下界面表示配置完成。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://oayvjmw6k.bkt.clouddn.com/terminal.png?imageView/2/w/400/h/400&quot; alt=&quot;Terminal&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 27 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/2016/07/27/iOS%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%87%86%E5%A4%87.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2016/07/27/iOS%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%87%86%E5%A4%87.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>hello world!</title>

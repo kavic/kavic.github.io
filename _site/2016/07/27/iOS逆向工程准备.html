@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>I&#39;m Kavic</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
+  <title>iOS逆向工程准备工作</title>
+  <meta name="description" content="1.准备一台越狱的设备">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="canonical" href="http://yourdomain.com/2016/07/27/iOS%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%87%86%E5%A4%87.html">
   <link rel="alternate" type="application/rss+xml" title="I'm Kavic" href="http://yourdomain.com/feed.xml">
 </head>
 
@@ -55,33 +54,62 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">iOS逆向工程准备工作</h1>
+    <p class="post-meta"><time datetime="2016-07-27T00:00:00+08:00" itemprop="datePublished">Jul 27, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jul 27, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="section">1.准备一台越狱的设备</h1>
 
-        <h2>
-          <a class="post-link" href="/2016/07/27/iOS%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%87%86%E5%A4%87.html">iOS逆向工程准备工作</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 26, 2016</span>
+<h1 id="theos">2.安装Theos</h1>
+<p>在Terminal 执行命令：</p>
+<pre>
+tanjunzhaodeMacBook-Pro:~ tanjunzhao$ export THEOS=/opt/theos 
 
-        <h2>
-          <a class="post-link" href="/2016/07/26/hello_world.html">hello world!</a>
-        </h2>
-      </li>
-    
-  </ul>
+tanjunzhaodeMacBook-Pro:~ tanjunzhao$ sudo git clone git://github.com/DHowett/theos.git $THEOS
+</pre>
+<p>完成Theos的安装</p>
 
-  <!-- <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p> -->
+<h1 id="ldid">3.配置ldid</h1>
+<p>下载地址：<a href="http://joedj.net/ldid ">http://joedj.net/ldid </a></p>
 
-</div>
+<p>下载文件放置”/opt/theos/bin/”</p>
+
+<p>设置权限，在Terminal执行命令：</p>
+
+<pre>sudo chmod 777 /opt/theos/bin/ldid</pre>
+
+<h1 id="cydiasubstrate">4.配置CydiaSubstrate</h1>
+<p>Theos存在一个bug，无法生成libsubstrate.dylib文件</p>
+
+<p>解决方案：
+越狱设备使用Cydia 下载 CydiaSubstrate</p>
+
+<p>使用iFunbox 将libsubstrate.dylib（越越设备上） 拷贝到 PC的“/opt/theos/lib/”目录下</p>
+
+<p>（推荐）也可以是用OpenSS的scp命令 完成以上拷贝工作（需要使用Cydia 安装OpenSS）</p>
+
+<h1 id="dpkg-deb">5.配置dpkg-deb</h1>
+<p>该工具用于将工程打包成deb文件（越越包的标准格式）</p>
+
+<h1 id="theos-nic-tempelates">6.配置Theos NIC tempelates</h1>
+<p>下载地址：<a href="https://github.com/DHowett/theos-nic-templates">https://github.com/DHowett/theos-nic-templates</a>
+将下载的zip文件解压得到的.tar文件拷贝到“/opt/theos/tempelate/iphone/”目录下即可</p>
+
+<p>在Terminal输入：</p>
+
+<pre>/opt/theos/bin/nic.pl</pre>
+
+<p>出现以下界面表示配置完成。</p>
+
+<p><img src="http://oayvjmw6k.bkt.clouddn.com/terminal.png?imageView/2/w/400/h/400" alt="Terminal" /></p>
+
+  </div>
+
+</article>
 
       </div>
     </div>
