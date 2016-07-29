@@ -37,7 +37,7 @@ Theos存在一个bug，无法生成libsubstrate.dylib文件
   
 使用iFunbox 将libsubstrate.dylib（越越设备上） 拷贝到 PC的“/opt/theos/lib/”目录下
 
-（推荐）也可以是用OpenSS的scp命令 完成以上拷贝工作（需要使用Cydia 安装OpenSS）
+（推荐）也可以是用OpenSSH的scp命令 完成以上拷贝工作（需要使用Cydia 安装OpenSSH）
 
 5.配置dpkg-deb
 =
